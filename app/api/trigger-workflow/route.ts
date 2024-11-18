@@ -6,7 +6,7 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
 export async function POST(request: Request) {
   try {
-    const { owner, repo, workflow_id, branch } = await request.json();
+    const { owner, repo, workflow_id = "main.yml", branch } = await request.json();
 
     // Validate input
     if (!owner || !repo || !workflow_id || !branch) {
