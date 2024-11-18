@@ -1,0 +1,26 @@
+
+### Get all tasks
+GET http://localhost:3000/api/tasks
+
+### Post new tasks
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+    "task": "New task"
+}
+
+### Get Latest Commit msgs
+GET http://localhost:3000/api/latest-commit?owner=AnselmoPfeifer&repo=finance-ai
+Accept: application/json
+
+### POST request
+POST http://localhost:3000/api/trigger-workflow
+Content-Type: application/json
+
+{
+  "owner": "AnselmoPfeifer",
+  "repo": "finance-ai",
+  "workflow_id": "main.yml",
+  "branch": "main"
+}
